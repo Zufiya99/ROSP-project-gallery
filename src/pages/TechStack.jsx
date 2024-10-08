@@ -1,87 +1,27 @@
-// import React, { useState } from 'react';
-// import styles from '../styles/TechStack.module.css';
-
-// const TechStack = () => {
-//   // State to manage the selected category
-//   const [selectedCategory, setSelectedCategory] = useState('App Development');
-
-//   // Data for the technologies in each category
-//   const techData = {
-//     'App Development': [
-//       { name: 'Flutter', icon: '/Flutter 1.svg' },
-//       { name: 'Dart', icon: '/Dart 1.svg' },
-//       { name: 'Figma', icon: '/figma 1.svg' },
-//       { name: 'Postman', icon: '/postman 1.svg' },
-//     ],
-//     'Web Development': [
-//       { name: 'Html', icon: '/html 1.svg' },
-//       { name: 'Css', icon: '/css 1.svg' },
-//       { name: 'React', icon: '/reactjs 1.svg' },
-//       { name: 'Javascript', icon: '/javascript 2.svg' },
-//       { name: 'Node.js', icon: '/nodejs 1.svg' },
-//     ],
-//     'Graphic Designing': [
-//       { name: 'Photoshop', icon: '/photoshop 1.svg' },
-//       { name: 'Canva', icon: '/canva 1.svg' },
-//     ],
-//   };
-
-//   return (
-//     <section id="techstack" className={styles.techStack}>
-//       <h2 className={styles.title}>Our Tech Stack</h2>
-      
-//       <div className={styles.buttonContainer}>
-//         {/* Buttons to switch between categories */}
-//         {Object.keys(techData).map((category) => (
-//           <button
-//             key={category}
-//             className={`${styles.categoryButton} ${selectedCategory === category ? styles.active : ''}`}
-//             onClick={() => setSelectedCategory(category)}
-//           >
-//             {category}
-//           </button>
-//         ))}
-//       </div>
-
-//       <div className={styles.iconContainer}>
-//         {/* Display technologies based on the selected category */}
-//         {techData[selectedCategory].map((tech, index) => (
-//           <div key={index} className={styles.techItem}>
-//             <img src={tech.icon} alt={tech.name} className={styles.techIcon} />
-//             <p>{tech.name}</p>
-//           </div>
-//         ))}
-//       </div>
-//     </section>
-//   );
-// };
-
-// export default TechStack;
-
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const TechStack = () => {
   // State to manage the selected category
-  const [selectedCategory, setSelectedCategory] = useState('App Development');
+  const [selectedCategory, setSelectedCategory] = useState("App Development");
 
   // Data for the technologies in each category
   const techData = {
-    'App Development': [
-      { name: 'Flutter', icon: '/Flutter 1.svg' },
-      { name: 'Dart', icon: '/Dart 1.svg' },
-      { name: 'Figma', icon: '/figma 1.svg' },
-      { name: 'Postman', icon: '/postman 1.svg' },
+    "App Development": [
+      { name: "Flutter", icon: "/Flutter 1.svg" },
+      { name: "Dart", icon: "/Dart 1.svg" },
+      { name: "Figma", icon: "/figma 1.svg" },
+      { name: "Postman", icon: "/postman 1.svg" },
     ],
-    'Web Development': [
-      { name: 'HTML', icon: '/html 1.svg' },
-      { name: 'CSS', icon: '/css 1.svg' },
-      { name: 'React', icon: '/reactjs 1.svg' },
-      { name: 'JavaScript', icon: '/javascript 2.svg' },
-      { name: 'Node.js', icon: '/nodejs 1.svg' },
+    "Web Development": [
+      { name: "HTML", icon: "/html 1.svg" },
+      { name: "CSS", icon: "/css 1.svg" },
+      { name: "React", icon: "/reactjs 1.svg" },
+      { name: "JavaScript", icon: "/javascript 2.svg" },
+      { name: "Node.js", icon: "/nodejs 1.svg" },
     ],
-    'Graphic Designing': [
-      { name: 'Photoshop', icon: '/photoshop 1.svg' },
-      { name: 'Canva', icon: '/canva 1.svg' },
+    "Graphic Designing": [
+      { name: "Photoshop", icon: "/photoshop 1.svg" },
+      { name: "Canva", icon: "/canva 1.svg" },
     ],
   };
 
@@ -99,8 +39,8 @@ const TechStack = () => {
               key={category}
               className={`px-4 py-2 text-sm md:text-base font-semibold rounded-lg ${
                 selectedCategory === category
-                  ? 'bg-blue-500 text-white'
-                  : 'bg-white text-gray-700 border border-gray-300'
+                  ? "bg-blue-500 text-white"
+                  : "bg-white text-gray-700 border border-gray-300"
               } transition duration-300 ease-in-out hover:bg-blue-500 hover:text-white`}
               onClick={() => setSelectedCategory(category)}
             >
@@ -116,8 +56,14 @@ const TechStack = () => {
               key={index}
               className="flex flex-col items-center p-4 bg-white shadow-md rounded-lg transform transition duration-300 hover:scale-105 hover:shadow-lg"
             >
-              <img src={tech.icon} alt={tech.name} className="w-12 h-12 md:w-16 md:h-16 mb-3" />
-              <p className="text-gray-700 text-sm md:text-base font-semibold">{tech.name}</p>
+              <img
+                src={tech.icon}
+                alt={tech.name}
+                className="w-12 h-12 md:w-16 md:h-16 mb-3"
+              />
+              <p className="text-gray-700 text-sm md:text-base font-semibold">
+                {tech.name}
+              </p>
             </div>
           ))}
         </div>
